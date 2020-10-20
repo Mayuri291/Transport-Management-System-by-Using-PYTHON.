@@ -1,0 +1,32 @@
+
+
+<html>
+      <head>
+	        <title>Dashboard</title>
+	  </head>
+	  <body>
+	        <h1>Transport Dashboard</h1>
+
+			<a href="home">Add booking</a>
+			<br><br>
+
+			<table border=1>
+			        <tr><td>ID</td> <td>name</td> <td>mobile</td> <td>idproof</td><td>amount</td>
+					<td>Edit</td> <td>Delete</td> </tr>
+
+					{% for x in row: %}
+					<tr><td>{{x.0}}</td><td>{{x.1}}</td><td>{{x.2}}</td><td>{{x.3}}</td><td>{{x.4}}</td>
+					<td><a href="edit/{{x.0}}">Edit</a></td>
+           <td><a href="delete/{{x.0}}">Delete</a></td>
+					</tr>
+
+					{% endfor %}
+
+
+
+
+
+			<table>
+	  </body>
+
+</html>
